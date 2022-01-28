@@ -1,0 +1,5 @@
+rootProject.name = 'restful-demo'
+include 'openfeign'
+include 'forrest'
+include 'springcloudfeign'
+

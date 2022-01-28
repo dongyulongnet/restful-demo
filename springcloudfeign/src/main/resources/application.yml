@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: springcloudfeign
+
+server:
+  port: 9002
+
+

@@ -1,0 +1,69 @@
+buildscript {
+    ext {
+        set('springBootVersion', "1.5.7.RELEASE")
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "http://mirror.didapinche.com/repository/maven-public/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.10.RELEASE"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+allprojects {
+    group 'com.dongyulong'
+    version '1.0.0'
+    apply plugin: 'java'
+}
+
+subprojects {
+    ext {
+        set('springBootVersion', "1.5.7.RELEASE")
+        set('springCloudVersion', "Edgware.SR2")
+    }
+
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+
+    repositories {
+        mavenLocal()
+        maven { url "http://mirror.didapinche.com/repository/maven-public/" }
+        mavenCentral()
+    }
+
+    dependencyManagement {
+        imports {
+            // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+    dependencies {
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+        compile 'org.springframework.boot:spring-boot-starter'
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+        compile 'org.springframework.boot:spring-boot-starter-web'
+        // https://mvnrepository.com/artifact/cn.hutool/hutool-all
+        compile 'cn.hutool:hutool-all:5.7.20'
+        compile 'com.github.wechatpay-apiv3:wechatpay-apache-httpclient:0.4.2'
+
+
+        compile 'org.projectlombok:lombok'
+
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    }
+
+    test {
+        useJUnit()
+    }
+
+}
+
+
