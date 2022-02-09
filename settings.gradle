@@ -2,4 +2,7 @@ rootProject.name = 'restful-demo'
 include 'openfeign'
 include 'forrest'
 include 'springcloudfeign'
+include 'dogn-core'
+include 'dogn-autoconfig'
+include 'dogn-common'
 

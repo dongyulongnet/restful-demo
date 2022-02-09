@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.dongyulong.dogn.autoconfig.log.MethodLogAspect
+
+
+## listener
+org.springframework.context.ApplicationListener=
