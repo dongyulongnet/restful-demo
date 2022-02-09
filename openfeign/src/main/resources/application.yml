@@ -6,3 +6,9 @@ server:
   port: 9001
 
 
+logging:
+  level:
+    org.apache.http.wire: debug
+    org.apache.http.headers: debug
+
+

@@ -33,6 +33,10 @@ dependencies {
     // https://mvnrepository.com/artifact/io.github.openfeign/feign-okhttp
     compile 'io.github.openfeign:feign-okhttp:10.12'
 
+    compile 'com.github.wechatpay-apiv3:wechatpay-apache-httpclient:0.4.2'
+
+    compile 'cn.hutool:hutool-all:5.7.20'
+
 
 
 

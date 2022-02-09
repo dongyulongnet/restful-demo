@@ -6,6 +6,8 @@ import cn.hutool.core.util.XmlUtil;
 import com.dongyulong.restfuldemo.openfeign.config.XmlEncoder;
 import com.dongyulong.restfuldemo.openfeign.entities.WechatServiceQueryRequestDTO;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import feign.Headers;
+import feign.Param;
 import feign.Request;
 import feign.RequestInterceptor;
 import feign.RequestLine;
@@ -30,9 +32,10 @@ public interface WechatService {
 
     String HOST = "https://api.mch.weixin.qq.com";
     String HOST2 = "https://api2.mch.weixin.qq.com";
-    String name = "微信";
+    String NAME = "微信";
 
     /**
+     *
      * @param queryRequest -
      * @return -
      */
@@ -55,7 +58,6 @@ public interface WechatService {
             return template -> {
                 template.target(WechatService.HOST2);
                 THREAD_LOCAL.set(System.currentTimeMillis());
-                System.err.println(template);
             };
         }
 
