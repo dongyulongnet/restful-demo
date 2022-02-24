@@ -34,7 +34,7 @@ public class WechatServiceConfig {
         return Feign.builder()
                 .logger(new Slf4jLogger())
                 .logLevel(Logger.Level.FULL)
-                .client(new OkHttpClient(new HttpClient.Builder(WechatService.NAME).build().getOkHttpClient()))
+                .client(new OkHttpClient())
                 .requestInterceptor(requestInterceptor)
                 .encoder(encoder)
                 .errorDecoder(errorDecoder)

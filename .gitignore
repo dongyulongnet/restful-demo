@@ -30,3 +30,5 @@ nbdist/
 /bin/
 
 **/config.properties
+
+gradle.properties

@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.dongyulong.dogn.autoconfig.log.MethodLogAspect
+  com.dongyulong.dogn.autoconfig.config.MethodLogAspectConfig
 
 
 ## listener

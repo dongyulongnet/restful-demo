@@ -37,6 +37,10 @@ dependencies {
 
     compile 'cn.hutool:hutool-all:5.7.20'
 
+    // https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils
+    compile 'commons-beanutils:commons-beanutils:1.9.4'
+
+
 
 
 

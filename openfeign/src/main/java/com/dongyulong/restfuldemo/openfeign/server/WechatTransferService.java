@@ -69,7 +69,7 @@ public class WechatTransferService {
     private String apiV3Key;
 
     public WechatTransferService() {
-        ioc.put(mchId, build(privateKey, mchId, serialNo, apiV3Key));
+//        ioc.put(mchId, build(privateKey, mchId, serialNo, apiV3Key));
     }
 
 
